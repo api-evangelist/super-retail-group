@@ -1,0 +1,5 @@
+generated: '2026-10-22'
+method: none
+source: https://superretailgroup.com.au/
+note: No first-party SDKs or client libraries found. npm and PyPI return 404 for superretailgroup, super-retail-group, supercheap-auto and rebel-sport; the corporate site links no SDK, CLI or GitHub org, and superretailgroup.com.au/developers/ returns 404.
+packages: []

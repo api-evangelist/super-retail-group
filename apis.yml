@@ -1,23 +1,96 @@
 aid: super-retail-group
+
 name: Super Retail Group
-description: 'Super Retail Group is a company surfaced via the API Evangelist harvest backlog (source:
-  australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.'
+
+description: Super Retail Group is one of Australia and New Zealand's largest retailers, owning four
+  brands — Supercheap Auto (automotive parts and accessories), rebel (sporting goods), BCF (boating,
+  camping and fishing) and Macpac (outdoor apparel and equipment) — with over 750 stores and 16,000 team
+  members. Surfaced via the API Evangelist harvest backlog (australia-apidays-2026); the corporate site
+  publishes no developer portal, API documentation or public API.
+
+image: https://superretailgroup.com.au/wp-content/uploads/2024/06/super_retail_group_logo_colour_1_1_1.webp
+
 url: https://raw.githubusercontent.com/api-evangelist/super-retail-group/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Retail
+- Australia
+- New Zealand
+- Automotive
+- Sporting Goods
+- Outdoor
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/super-retail-group-llms.txt
+- type: Hosts
+  url: hosts/super-retail-group-hosts.yml
+- type: IntegrationEdges
+  url: integrations/super-retail-group-integration-edges.yml
+- type: Vendors
+  url: vendors/super-retail-group-vendors.yml
+- type: DomainSecurity
+  url: security/super-retail-group-domain-security.yml
 - type: Website
   url: https://superretailgroup.com.au/
+- type: About
+  url: https://superretailgroup.com.au/about/
+- type: Support
+  url: https://superretailgroup.com.au/contact/
+- type: Investors
+  url: https://superretailgroup.com.au/investors/
+- type: Careers
+  url: https://superretailgroup.com.au/careers/
+- type: TermsOfService
+  url: https://superretailgroup.com.au/terms-of-use/
+- type: PrivacyPolicy
+  url: https://superretailgroup.com.au/privacy/
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Homepage title and meta description name Super Retail Group and its four brands; no developer
+    portal, API docs, GitHub or social links are published on the site.
+  evidence:
+  - url: https://superretailgroup.com.au/
+    status: 200
+  - url: https://superretailgroup.com.au/about/
+    status: 200
+  - url: https://superretailgroup.com.au/contact/
+    status: 200
+  - url: https://superretailgroup.com.au/investors/
+    status: 200
+  - url: https://superretailgroup.com.au/careers/
+    status: 200
+  - url: https://superretailgroup.com.au/terms-of-use/
+    status: 200
+  - url: https://superretailgroup.com.au/privacy/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

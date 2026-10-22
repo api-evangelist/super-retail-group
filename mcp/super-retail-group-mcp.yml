@@ -1,0 +1,20 @@
+name: Super Retail Group MCP Server
+type: MCPServer
+generated: '2026-10-22'
+method: none
+status: none
+description: No official Model Context Protocol server was found for Super Retail Group (Supercheap Auto, rebel, BCF, Macpac). The company publishes no public API, OpenAPI contract or developer portal, so there are no operations from which to derive a candidate tool list.
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+evidence:
+- url: https://superretailgroup.com.au/.well-known/mcp.json
+  status: 404
+  checked: '2026-10-22'
+- url: https://superretailgroup.com.au/llms.txt
+  status: 200
+  note: Provider llms.txt lists corporate pages only and mentions no MCP server or API.
+- search: '"Super Retail Group" MCP server OR developer API OR "llms.txt"'
+  result: no Super Retail Group results; only unrelated "Super*" products
+tools: []

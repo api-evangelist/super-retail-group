@@ -1,0 +1,46 @@
+generated: '2026-10-22'
+method: searched
+source:
+- https://zenbridge.io/trading-partners/superretailgroup-edi-integration
+- https://zapier.com/apps/super-retail-group/integrations
+- https://n8n.io/integrations/super-retail-group/
+- https://composio.dev/toolkits/super-retail-group
+- https://monid.ai/tools/super-retail-group
+checked:
+- https://superretailgroup.com.au/
+- https://superretailgroup.com.au/developers/
+- https://www.spscommerce.com/au/network/find-a-partner/view/super-retail-group-srg
+- https://zenbridge.io/trading-partners/superretailgroup-edi-integration
+- https://composio.dev/toolkits/super-retail-group
+- https://monid.ai/tools/super-retail-group
+- https://n8n.io/integrations/super-retail-group/
+- https://zapier.com/apps/super-retail-group/integrations
+summary: null
+marketplace_apps: []
+edges:
+- partner_name: SPS Commerce
+  partner: sps-commerce
+  type: marketplace
+  marketplace: SPS Commerce Network (find-a-partner)
+  direction: third-party
+  category: edi
+  evidence: https://www.spscommerce.com/au/network/find-a-partner/view/super-retail-group-srg
+  operations:
+  - EDI 850 (Purchase Order)
+  - EDI 856 (Ship Notice/Manifest)
+- partner_name: Zenbridge
+  partner: null
+  type: marketplace
+  marketplace: Zenbridge trading partners
+  direction: third-party
+  category: edi
+  evidence: https://zenbridge.io/trading-partners/superretailgroup-edi-integration
+  operations:
+  - EDI 810 (Invoice)
+  - EDI 850 (Purchase Order)
+  - EDI 855 (Purchase Order Acknowledgment)
+  - EDI 856 (Ship Notice/Manifest)
+templates: []
+note: Super Retail Group publishes no developer portal, API docs or integrations page. The only integration surface
+  found is supplier EDI (X12 810/850/855/856), offered by third-party EDI networks that list Super Retail Group
+  as a trading partner. These are third-party claims, not provider-published contracts.

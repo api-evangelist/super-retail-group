@@ -1,0 +1,76 @@
+generated: '2026-10-22'
+method: searched
+probe: true
+source: https://superretailgroup.com.au/privacy/
+scope_note: >-
+  Super Retail Group (ASX: SUL; Supercheap Auto, rebel, BCF, Macpac) is an Australian/New Zealand retailer with
+  no public API program. The site footer links two legal pages: "Privacy" (https://superretailgroup.com.au/privacy/,
+  titled "Privacy & Security") and "Terms of use". A plain curl GET of both returned an HTTP 403 "Please enable
+  cookies" challenge; fetch-url.py (browser UA, plain strategy) read both with HTTP 200. Only the Privacy Policy
+  speaks to regulatory signals. No retention period, subprocessor list, trust center, accessibility statement or
+  breach-notification commitment is published on these pages, so nothing is recorded for those signals.
+signals:
+  data_subject_request:
+    url: https://superretailgroup.com.au/privacy/
+    section: '9. Access, correction and complaints'
+    rights_named: [access, correction, complaint]
+    escalation: Office of the Australian Information Commissioner; New Zealand Privacy Commissioner
+    evidence:
+    - source: https://superretailgroup.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        You may request access to or correction of your personal information by contacting us as set out in section 10.
+    - source: https://superretailgroup.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        If you are not satisfied with our response, you may contact the Office of the Australian Information Commissioner, or, where applicable, the New Zealand Privacy Commissioner
+    note: >-
+      Access and correction rights (Australian Privacy Act / NZ Privacy Act), with identity verification and regulator
+      escalation. No deletion or portability right and no response deadline are stated.
+  data_residency:
+    url: https://superretailgroup.com.au/privacy/
+    section: '5. Who do we share your personal information with?'
+    evidence:
+    - source: https://superretailgroup.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Personal information may be disclosed to recipients in Australia or New Zealand and in other overseas countries, including Canada, China, the EU Member States, India, Japan, Singapore, South Korea, Switzerland, the United Kingdom, and the United States.
+    - source: https://superretailgroup.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Where required by law, we take reasonable steps to ensure that personal information disclosed overseas is handled securely and in line with this Privacy Policy.
+    note: >-
+      A disclosure of cross-border transfer destinations (APP 8 style), not a residency commitment: data may leave
+      Australia/New Zealand for the ten named jurisdictions.
+  subprocessors:
+    url: https://superretailgroup.com.au/privacy/
+    section: '5. Who do we share your personal information with?'
+    evidence:
+    - source: https://superretailgroup.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        These providers may help us with delivery, payment processing, banking, artificial intelligence services, fraud prevention, credit and credit assessment, information technology, hosting, data storage, security, website operation, customer communications, analytics, advertising, marketing, surveys, customer research, product repairs and recalls
+    note: >-
+      Service-provider CATEGORIES only; no named subprocessor list is published.
+  ai_transparency:
+    url: https://superretailgroup.com.au/privacy/
+    section: '7. Artificial intelligence and automated technologies'
+    evidence:
+    - source: https://superretailgroup.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        We may use artificial intelligence (AI), machine learning and other automated technologies, and engage service providers that use these technologies on our behalf, to support customer service, analytics, personalisation, recommendations, search functionality, marketing, fraud detection, security and other business activities.
+    - source: https://superretailgroup.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        We apply governance and oversight processes to our use of artificial intelligence and automated tools.
+    note: >-
+      A dedicated AI section discloses use cases and claims governance, but names no models, providers or
+      opt-out from automated processing.
